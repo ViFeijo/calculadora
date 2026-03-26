@@ -1,0 +1,75 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size:36px;
+    font-weight: 500;
+    font-family: Oswald;
+}
+body { 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#teclado {
+    padding: 20px;
+    border-radius: 20px;
+    padding-top: 40px;
+}
+#zero{
+    width: 156px;
+}   
+#teclado {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f3;
+    width: 400px;
+}
+#c, #inversao, #porcentagem {
+    color: #898989;
+}
+#x, #menos, #mais, #divisao {
+    color: #745ff2;
+}
+button {
+    background-color: #f0f0f3;
+    color: #728ab7;
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 5px;
+}
+#igual {
+    background-color: #2dd3c5;
+    color: white;
+}
+button:active{
+    background-color: white;
+}
+.painel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 300px;
+    width: 400px;
+    margin: -30px;
+    border-radius: 20px;
+}
+#resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 64px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header  class="painel">
+        <div>
+            <input id="resultado">
+        </div>
+    </header>
+    <main id="main">
+        <div class="teclado" id="teclado">
+            
+            <div id="linha1">
+                <button class="limpa" id="c" onclick="limpa()">C</button>
+                <button id="inversao" onclick="inversao()">&#177;</button>
+                <button id="porcentagem" onclick="porcentagem()">%</button>
+                <button id="divisao" onclick="add('/')">&#247;</button>
+            </div>  
+            <div id="linha2">
+                <button id="7" onclick="add(7)">7</button>
+                <button id="8" onclick="add(8)">8</button>
+                <button id="9" onclick="add(9)" >9</button>
+                <button id="x" onclick="add('*')">X</button>
+            </div>    
+            <div id="linha3">
+                <button id="4"onclick="add(4)">4</button>
+                <button id="5"onclick="add(5)">5</button>
+                <button id="6"onclick="add(6)">6</button>
+                <button id="menos"onclick="add('-')">-</button>
+            </div> 
+            <div id="linha4">
+                <button id="1"onclick="add(1)">1</button>
+                <button id="2"onclick="add(2)">2</button>
+                <button id="3"onclick="add(3)">3</button>
+                <button id="mais"onclick="add('+')">+</button>
+            </div> 
+            <div id="linha5">
+                <button id="zero"onclick="add(0)">0</button>
+                <button id="ponto"onclick="add('.')">.</button>
+                <button id="igual"onclick="calcular()">=</button>
+            </div> 
+            <script src="script.js"></script>
+    </div>
+    </main>
+</body>
+</html>
