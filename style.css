@@ -14,6 +14,17 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
+.leozao {
+    position: fixed;        /* garante que fique sobre toda a tela */
+    top: 50%;               /* centraliza verticalmente */
+    left: 50%;              /* centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* centraliza o GIF no meio */
+    z-index: 9999;          /* muito acima de tudo */
+    pointer-events: none;   /* não atrapalha cliques */
+    display: none;          /* escondido por padrão */
+    max-width: 200px;       /* opcional: controla o tamanho */
+    max-height: 200px;
+}
 #bg-video {
   position: fixed;
   top: 0;
