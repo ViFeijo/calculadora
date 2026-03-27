@@ -14,16 +14,17 @@ body {
     justify-content: center;
     min-height: 100vh;
 }
-.leozao {
-    position: fixed;        /* garante que fique sobre toda a tela */
-    top: 50%;               /* centraliza verticalmente */
-    left: 50%;              /* centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* centraliza o GIF no meio */
-    z-index: 9999;          /* muito acima de tudo */
-    pointer-events: none;   /* não atrapalha cliques */
-    display: none;          /* escondido por padrão */
-    max-width: 200px;       /* opcional: controla o tamanho */
-    max-height: 200px;
+#jumpscare {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover; /* preenche sem distorcer */
+    z-index: 9999;
 }
 #bg-video {
   position: fixed;
@@ -45,27 +46,25 @@ body {
 #teclado {
     display: flex;
     flex-direction: column;
-    background-color: #f0f0f3;
+    background-color: #1A1A1A;
     width: 400px;
 }
-#c, #inversao, #porcentagem {
-    color: #898989;
-}
+
 #x, #menos, #mais, #divisao {
-    color: #745ff2;
+    color: #ffffff;
+    background-color: #C28B38;
 }
 button {
-    background-color: #f0f0f3;
-    color: #728ab7;
+    background-color: #333333;
+    border: 2px solid #D9A036;
     width: 70px;
     height: 70px;
     border-radius: 16px;
-    border: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: 5px;
 }
 #igual {
-    background-color: #2dd3c5;
+    background-color: #C28B38;
     color: white;
 }
 button:active{

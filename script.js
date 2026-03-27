@@ -1,17 +1,16 @@
 const resultado = document.getElementById('resultado');
-
+const operadores = ['+', '-', '*', '/'];
 
 
 function add(x) {
     if (resultado.value === '0') {
         resultado.value = ''
     }
-    const operadores = ['+', '-', '*', '/']
     if (operadores.includes(x)) {
         for (let i = 0; i < operadores.length; i++) {
             if (resultado.value.endsWith(operadores[i])) {
                 resultado.value = resultado.value.slice(0, -1,)
-                break       //!!! dai acaba o for e executa o resultado.value +=x
+                break
             }
         }
     }
@@ -26,11 +25,18 @@ function porcentagem(){
     resultado.value = (resultado.value)/100;
 }
 function calcular() {
-   try{
-    resultado.value = eval(resultado.value)
-   } catch(error) {
-    resultado.value = "it's me"     
-   }
+     try {
+        let valor = eval(resultado.value);
+
+        if (!isFinite(valor)) {
+            throw new Error("Erro matemático");
+        }
+
+        resultado.value = valor;
+
+    } catch (e) {
+        ativarJumpscare();
+    }
 }
 function inversao() {
     if (resultado.value.startsWith('-')) {
@@ -39,15 +45,14 @@ function inversao() {
         resultado.value = '-'+resultado.value
     }
 }
+function ativarJumpscare() {
+    const gif = document.getElementById("jumpscare");
+    const som = document.getElementById("som");
 
- if (resultado.value === "it's me" || resultado.value === "Infinity" || resultado.value === "NaN") {
-    const gif = document.querySelector("./img/display.png");
     gif.style.display = "block";
-    }
-     else {
-    resultado.value = `${resultado.value}*2`
-    console.log(resultado.value);
-    continha.operacao = resultado.value
-    resultado.value = eval(resultado.value);
-    }
-    
+    som.play();
+
+    setTimeout(() => {
+        gif.style.display = "none";
+    }, 800);
+}
