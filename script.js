@@ -1,5 +1,5 @@
 const resultado = document.getElementById('resultado');
-const operadores = ['+', '-', '*', '/'];
+const operadores = ['+', '-', '*', '/', '.'];
 
 
 function add(x) {
@@ -25,7 +25,7 @@ function porcentagem(){
     resultado.value = (resultado.value)/100;
 }
 function calcular() {
-     try {
+        try {
         let valor = eval(resultado.value);
 
         if (!isFinite(valor)) {
