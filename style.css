@@ -23,21 +23,21 @@ body {
     width: 100vw;
     height: 100vh;
 
-    object-fit: cover; 
+    object-fit: cover;
     z-index: 9999;
 }
 #bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 #zero{
     width: 156px;
-}   
+}
 #teclado {
     display: flex;
     flex-direction: column;
