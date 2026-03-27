@@ -1,2 +1,2 @@
 # Calculado do leozao
-(img/goldenleo.png)
+<img src="img/goldenleo.png" width="500">
